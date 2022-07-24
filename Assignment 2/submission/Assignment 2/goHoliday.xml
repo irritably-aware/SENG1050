@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="goHoliday.xsl"?>
+	<!DOCTYPE Packages 
+		[
+			<!ELEMENT Packages (Category, Package+)>
+				<!ELEMENT	Category (#PCDATA)>
+				<!ELEMENT	Package (PackageName, Description, Cost, Nights, Popularity, Accomodations+, Coupon?, Reviews*, PromoPic*, PromoPage, Affiliates*, PackageCode)>
+					<!ELEMENT	PackageName	(#PCDATA)>
+					<!ELEMENT	Description	(#PCDATA)>
+					<!ELEMENT	Cost	(#PCDATA)>
+					<!ELEMENT	Nights	(#PCDATA)>
+					<!ELEMENT	Popularity	(#PCDATA)>
+					<!ELEMENT	Accomodations (Location+, ExtraCost, CostCovered)>
+						<!ELEMENT	Location (City, Country, Planet)>
+							<!ELEMENT	City	(#PCDATA)>
+							<!ELEMENT	Country	(#PCDATA)>
+							<!ELEMENT	Planet	(#PCDATA)>
+						<!ELEMENT	ExtraCost	(#PCDATA)>
+						<!ELEMENT	CostCovered	(#PCDATA)>
+					<!ELEMENT	Coupon	(#PCDATA)>
+					<!ELEMENT	Reviews	(ReviewScore, ReviewName, ReviewDate)>
+						<!ELEMENT	ReviewScore (#PCDATA)>
+						<!ELEMENT	ReviewName	(#PCDATA)>
+						<!ELEMENT	ReviewDate	(#PCDATA)>
+					<!ELEMENT	PromoPic (PicName, PicPath)>
+						<!ELEMENT	PicName	(#PCDATA)>
+						<!ELEMENT	PicPath	(#PCDATA)>
+					<!ELEMENT	PromoPage	(PromoPath)>
+						<!ELEMENT	PromoPath (#PCDATA)>
+					<!ELEMENT	Affiliates	(#PCDATA)>
+					<!ELEMENT	PackageCode	(#PCDATA)>
+					<!ATTLIST	PackageCode	Code	ID #REQUIRED>
+					<!ENTITY	Default	"Earth">
+		]
+	>
+
+<Packages>
+	<Category>Luxury</Category>
+	<Package>
+		<PackageName>Helsinki Winter Package
+		</PackageName>
+		<Description>spend the winter in Helsinki with optional accomadation w/ Helsinki Sauna!
+		</Description>
+		<Cost>$2500
+		</Cost>
+		<Nights>7
+		</Nights>
+		<Popularity>4.5/5
+		</Popularity>
+		<Accomodations>
+			<Location>
+				<City>Helsinki
+				</City>
+				<Country>Finland
+				</Country>
+				<Planet>&Default;
+				</Planet>
+			</Location>
+			<ExtraCost>$500
+			</ExtraCost>
+			<CostCovered>no
+			</CostCovered>
+		</Accomodations>
+		<Coupon>Trivago: free sauna accomadation coupon
+		</Coupon>
+		<Reviews>
+			<ReviewScore>5/5
+			</ReviewScore>
+			<ReviewName>"expensive but you get what you paid for"
+			</ReviewName>
+			<ReviewDate>17/09/2020
+			</ReviewDate>
+		</Reviews>
+		<PromoPic>
+			<PicName>Helsinki Winter
+			</PicName>
+			<PicPath>images/Helsinki_Winter.jpg
+			</PicPath>
+		</PromoPic>
+		<PromoPage>
+			<PromoPath>/home/user/goHoliday/Promo/HWP
+			</PromoPath>
+		</PromoPage>
+		<Affiliates>Helsinki district government, Trivago
+		</Affiliates>
+		<PackageCode Code="PHXnymI2n5w">
+		</PackageCode>
+	</Package>
+	
+	<Package>
+		<PackageName>Chang'an Rewind Package
+		</PackageName>
+		<Description>explore the historical city of Chang'an with goHoliday!
+		</Description>
+		<Cost>$1500
+		</Cost>
+		<Nights>5
+		</Nights>
+		<Popularity>4/5
+		</Popularity>
+		<Accomodations>
+			<Location>
+				<City>Chang'an
+				</City>
+				<Country>China
+				</Country>
+				<Planet>&Default;
+				</Planet>
+			</Location>
+			<ExtraCost>non
+			</ExtraCost>
+			<CostCovered>n/a
+			</CostCovered>
+		</Accomodations>
+		<Coupon>non
+		</Coupon>
+		<Reviews>
+			<ReviewScore>5/5
+			</ReviewScore>
+			<ReviewName>"beautiful ancient city"
+			</ReviewName>
+			<ReviewDate>19/10/2020
+			</ReviewDate>
+		</Reviews>
+		<PromoPic>
+			<PicName>Chang'an overview
+			</PicName>
+			<PicPath>images/ChangAn_overview.png
+			</PicPath>
+		</PromoPic>
+		<PromoPage>
+			<PromoPath>/home/user/goHoliday/Promo/CRP
+			</PromoPath>
+		</PromoPage>
+		<Affiliates>Shaanxi provincial government, air China
+		</Affiliates>
+		<PackageCode Code="vaq9iQVE9wI">
+		</PackageCode>
+	</Package>
+	
+	<Package>
+		<PackageName>Dubai Luxury Package
+		</PackageName>
+		<Description>a trip to the shopping district of Dubai city, as well as the coastal development area!
+		</Description>
+		<Cost>$3500
+		</Cost>
+		<Nights>3
+		</Nights>
+		<Popularity>5/5
+		</Popularity>
+		<Accomodations>
+			<Location>
+				<City>Dubai
+				</City>
+				<Country>UAE
+				</Country>
+				<Planet>&Default;
+				</Planet>
+			</Location>
+			<ExtraCost>upgrading accomadation to five star
+			</ExtraCost>
+			<CostCovered>no
+			</CostCovered>
+		</Accomodations>
+		<Coupon>non
+		</Coupon>
+		<Reviews>
+			<ReviewScore>4/5
+			</ReviewScore>
+			<ReviewName>"short and expensive, maximise your time use!"
+			</ReviewName>
+			<ReviewDate>10/07/2020
+			</ReviewDate>
+		</Reviews>
+		<PromoPic>
+			<PicName>Dubai Coastal Development zone
+			</PicName>
+			<PicPath>images/Dubai_Coast.jpeg
+			</PicPath>
+		</PromoPic>
+		<PromoPage>
+			<PromoPath>home/user/goHoliday/Promo/DLP
+			</PromoPath>
+		</PromoPage>
+		<Affiliates>Emirates
+		</Affiliates>
+		<PackageCode Code="om3tcw">
+		</PackageCode>
+	</Package>
+</Packages>
+	

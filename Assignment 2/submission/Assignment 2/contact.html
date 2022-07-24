@@ -1,0 +1,83 @@
+<!-- 
+Filename: contact.html
+Author: Wei Chen
+date last edit: 4/11/2020
+-->
+
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		
+	 	<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+	 	<title>Privacy Policy</title>
+	 	<meta name="Contact" content="Contact">
+
+	</head>
+
+	<body>
+ 	<!-- <script src="js/scripts.js"></script> -->
+
+ 		<header>	<!--this is the Go:Holidays banner-->
+			<h1 style="text-align:center;">	<!--first heading and the only level 1 heading -->
+				<a style="font-family:serif;font-weight: 500; color: lime;">Go:</a>	
+				<a style="font-family: prestige-elite-std, monospace; font-weight: 400; color: fuchsia; background-color:rgba(255,255,255, .7);">
+					Holidays
+				</a>	
+			</h1>
+		</header>
+
+		<nav>	<!--this is the nav-->
+			<ul>
+				<li onclick="location.href='goHoliday2.xml';"><a>Adventure</a></li>
+				<li onclick="location.href='goHoliday.xml';"><a>Luxury</a></li>
+				<li onclick="location.href='index.html';"><a>Home</a></li>
+				<li onclick="location.href='privacy.html';"> <a>Privacy</a> </li>
+				<li onclick="location.href='submission.html';"><a>Submission</a> </li>
+				<li onclick="location.href='aboutus.html';"><a>About us</a></li>
+				<li onclick="location.href='contact.html';"><a>Contact</a> </li>
+			</ul>
+			<hr>
+		</nav>
+
+		<main>
+			<div>
+		<form method= "post" action="http://jkorpela.fi/cgi-bin/echo.cgi">
+
+		  <label for="fname">First name:</label> 
+		  <input type="text" id="fname" name="fname" value="John"> <br><br>
+
+		  <label for="lname">Last name:</label>
+		  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+
+		  <label for="age">Age:</label>
+		  <input type="number" id="age" name="age" value="18"> <br><br>
+
+		  <label for="email">E-mail:</label>
+		  <input type="email" id="email" name="email" value=""> <br><br>
+
+		  <label for="phone">Phone:</label>
+		  <input type="tel" id="phone" name="phone" value=""> <br><br>
+
+		  <label for="desc">Description of your issue or suggestion:</label> <br>
+		  <textarea id="desc" name="desc" cols="40" rows="5"></textarea> <br>
+
+		  <input type="reset" value="Clear">
+		  <input type="submit" value="Submit">
+		</form>
+			</div>
+		</main>
+
+		<footer>
+			&copy; Copyright Newcastle University |
+			<i> GoHolidays pty ltd |
+			GoHolidays, 42 high street, Sydney 2048 NSW Australia |
+			Phone: +02 0010 0101 | </i>
+			<a href="support@goholidays.com.au">support@goholidays.com.au</a>
+		</footer>	<!--footer -->
+
+	</body>
+</html>

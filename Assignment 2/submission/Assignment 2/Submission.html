@@ -1,0 +1,183 @@
+<!-- 
+Filename: Submission.html
+Author: Wei Chen
+date last edit: 4/11/2020
+-->
+
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		
+	 	<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+	 	<title>Submission</title>
+	 	<meta name="Submission" content="Submission">
+
+	</head>
+
+	<body>
+
+		<script>
+
+	    	String.prototype.trin = function() {
+     			return this.replace(/^\s+|\s+$/g,"");
+     			
+	    	}
+
+	    	function theValidator()
+	    	{	
+	    		var tnc = document.forms["Submission"]["tnc"].checked;
+	    		var r1 = document.getElementById("asia").checked;
+	    		var r2 = document.getElementById("europe").checked;
+	    		var r3 = document.getElementById("NA").checked;
+	    		var r4 = document.getElementById("SA").checked;
+	    		var r5 = document.getElementById("africa").checked;
+	    		var r6 = document.getElementById("other").checked;
+	    		var emailsyntax = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+	    		if (document.Submission.fname.value.trim() === "")
+	    		{
+	    			alert("the name field is empty!");
+	    			return false;
+	    		}
+	    		if (document.Submission.email.value.trim() ==="")
+	    		{
+	    			alert("the email field is empty!");
+	    			return false;
+	    		}
+	    		if (document.Submission.email.value.trim().match(emailsyntax)){}
+	    		else 
+	    		{
+	    			alert("invalid email address!"); 
+	    			return false;
+	    		}
+	    		if(r1==false&&r2==false&&r3==false&&r4==false&&r5==false&&r6==false)
+	    		{
+	    			alert("select a region please!");
+	    			return false;
+	    		}
+	    		if (document.Submission.hname.value.trim() ==="")
+	    		{
+	    			alert("the holiday name field is empty!");
+	    			return false;
+	    		}
+
+	    		if(document.getElementById("desc").value.trin() === '')
+	    		{
+	    			alert("the holiday description field is empty!");
+	    			return false;
+	    		}
+	    		if(tnc ==false)
+	    		{ 	
+	    			alert("you must agree to the T&C to do this!");
+	    			return false;
+	    		}
+	    		
+	    		return true;
+    		}
+
+  		</script>
+
+ 		<header>	<!--this is the Go:Holidays banner-->
+			<h1 style="text-align:center;">	<!--first heading and the only level 1 heading -->
+
+				<a style="font-family:serif;font-weight: 500; color: lime;">Go:</a>	
+				<a style="font-family: prestige-elite-std, monospace; font-weight: 400; color: fuchsia; background-color:rgba(255,255,255, .7);">Holidays</a>	
+			</h1>
+		</header>
+
+		<nav>	<!--this is the nav-->
+			<ul>
+				<li onclick="location.href='goHoliday2.xml';"><a>Adventure</a></li>
+				<li onclick="location.href='goHoliday.xml';"><a>Luxury</a></li>
+				<li onclick="location.href='index.html';"><a>Home</a></li>
+				<li onclick="location.href='privacy.html';"> <a>Privacy</a> </li>
+				<li onclick="location.href='submission.html';"><a>Submission</a> </li>
+				<li onclick="location.href='aboutus.html';"><a>About us</a></li>
+				<li onclick="location.href='contact.html';"><a>Contact</a> </li>
+			</ul>
+			<hr>
+		</nav>
+
+		<main>
+			<div>
+				<form name="Submission" method= "post" action="http://jkorpela.fi/cgi-bin/echo.cgi" onsubmit="return theValidator()"><!--sends data using post method to the given link, invoke the validator method-->
+				  <label for="fname">First name:*</label><br>
+				  <input type="text" id="fname" name="fname" value="John"><br>
+
+				  <label for="lname">Last name:</label><br>
+				  <input type="text" id="lname" name="lname" value="Doe"><br>
+
+				  <label for="email">Email:*</label><br>
+				  <input type="text" id="email" name="email" value="JohnDoe@email.com"><br>
+
+				  <label for="submissions">No. Previous Submissions:</label><br>
+				  <input type="number" id="submissions" name="submissions" value=""><br>
+
+				  <input type="checkbox" id="recentrip" name="recentrip" value="recentrip">
+				  <label for="recentrip">I have went on holidays in the past two years</label><br>
+
+				  <p> preferred region for holidays* </p>
+				  <input type="radio" id="asia" name="region" value="asia">
+				  <label for="asia">Asia</label>
+
+				  <input type="radio" id="europe" name="region" value="europe">
+				  <label for="europe">Europe</label>
+
+				  <input type="radio" id="NA" name="region" value="NA">
+				  <label for="NA">North America</label>
+
+				  <input type="radio" id="SA" name="region" value="SA">
+				  <label for="SA">South America</label>
+
+				  <input type="radio" id="africa" name="region" value="africa">
+				  <label for="africa">Africa</label>
+
+				  <input type="radio" id="other" name="region" value="other">
+				  <label for="other">Other</label><br><hr>
+
+				  <label for="hname">Name of your holiday:*</label><br>
+				  <input type="text" id="hname" name="hname" value=""><br><br>
+
+				  <label for="category">Category of the holiday:</label>
+					<select name="category" id="category">
+						<option value="default">please choose an option</option>
+				  		<option value="adventure">Adventure</option>
+		  				<option value="luxury">Luxury</option>
+		  				<option value="escape">Escape</option>
+		  				<option value="journey">Journey</option>
+		  			</select><br><br>
+
+				  <label for="desc">Description of your holiday:*</label><br>
+				  <textarea id="desc" name="desc" cols="40" rows="5"></textarea><br>
+				  
+				  <input type="checkbox" id="pricing" name="pricing">
+				  <label for="pricing">accomadation pricing included?</label><br>
+
+				  <input type="checkbox" id="coupons" name="coupons">
+				  <label for="coupons">coupons accepted?</label><br><br>
+
+				  <input type="checkbox" id="tnc" name="tnc">
+				  <label for="tnc">I have read, and agree to the <a href="tnc.html">terms and conditions*</a></label><br><br>
+
+				  <input type="reset" value="Clear">
+				  <input type="submit" value="Submit">
+				  
+				</form>
+			</div>
+		</main>
+
+		<footer>
+			&copy; Copyright Newcastle University |
+			<i> GoHolidays pty ltd |
+			GoHolidays, 42 high street, Sydney 2048 NSW Australia |
+			Phone: +02 0010 0101 | </i>
+			<a href="support@goholidays.com.au">support@goholidays.com.au</a>
+		</footer>	<!--footer -->
+
+	</body>
+
+</html>

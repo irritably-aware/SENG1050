@@ -1,0 +1,88 @@
+/*
+Filename: style.css
+Author: Wei Chen
+date last edited: 4/11/2020
+*/
+
+body{	background-image:url('images/background.jpg');
+		margin-left: 1cm;
+		background-size: cover;
+		background-repeat: no-repeat;
+	} /*for body section, background image set with relative path, entire body section 1cm to the left margin, background scaling fit, background no repeating*/
+
+hr	{
+	    border: 0;
+	    height: 1px;
+	    background: #333;
+	    background-image: linear-gradient(to right, yellow, aqua, lime);
+	} /*horizontal rulers set no border, set height, background color with hex code, and gradient colour with 3 colours left to right */
+
+main {
+	margin:auto;
+	width:100%;
+}/*makes sure the main tag has correct width*/
+
+form {display: inline-block;}
+/*combined, form and body makes contents align centre*/
+body{text-align: center;}
+
+hr.bleached	{
+					border: 0;
+	    			height: 1px;
+	    			background: #333;
+	    			background-image: linear-gradient(to right, silver, gray, black);
+			} /*same as above but only for hr of class bleached, differ in the gradient colour choices */
+
+nav {padding:1px;} /*giving navbar a padding, helps with page formating post-float */
+
+h2 	{
+		text-shadow: 2px 2px 5px lime;
+		font-family:serif; 	font-weight: 400; color: yellow;
+	}/*all 2nd level headings given text shadow, font, colour and font weight */
+
+ul {
+	  	padding:1px;
+	  	display: flex;
+	 	justify-content: center;
+ 	}/*unordered list given padding, using flexbox to center while remain floated left */
+
+li {
+		list-style-type: none;
+		float: left;
+		display: block;	  
+		padding: 10px;
+		padding-right: 70px;
+		padding-left: 70px;	  
+		background-color: rgba(44,130,201,0.55);
+	}/*a listings floated in order to create a centred nav bar. item shape block, some padding for formating, colour and transparancy given */
+
+li a 	{
+		  color: aqua;
+		  text-decoration: none;
+	 	}/*set text colour of all <a> tag under a <li> tag, remove underscore */
+
+p 	{	
+	/* 1 pixel black shadow to left, top, right and bottom */
+    text-shadow: -1px 0 azure, 0 1px azure, 1px 0 azure, 0 -1px azure	
+}/*set colour of all <p> text */
+
+div {	  
+	  border-style:dashed;
+	  border-color:gray;
+	  background-color: rgba(44,130,201,0.35);
+	}/*the div containers i use now with a fancy border */
+
+div.inner{
+	border-style:groove;
+	border-color:aqua;
+	background-color:rgba(44,139,291,0.35);
+	}/*this div doesn't have dash border*/
+
+aside p 	{
+				color:yellow;
+				background-color:rgba(255,128,0,0.6);
+			}/*all <p> text under the <aside> tag given colour and the element background colour+transparency */
+
+li:hover {background-color:rgba(233,212,96,0.8);}/*when mouse hover listings have different background colour and transparency */
+
+footer {color:gray;}/*sets footer colour */

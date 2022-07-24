@@ -1,0 +1,4 @@
+Feedback to Learner
+30/09/20 09:28
+
+css: did not design span, did not use class selector; html: could show more work in designing the page with more elements.

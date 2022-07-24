@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE Packages 
+		[
+			<!ELEMENT Packages (Category, Package+)>
+				<!ELEMENT	Category (#PCDATA)>
+				<!ELEMENT	Package (PackageName, Description, Cost, Nights, Popularity, Accomodations+, Coupon?, Reviews*, PromoPic*, PromoPage, Affiliates*, PackageCode)>
+					<!ELEMENT	PackageName	(#PCDATA)>
+					<!ELEMENT	Description	(#PCDATA)>
+					<!ELEMENT	Cost	(#PCDATA)>
+					<!ELEMENT	Nights	(#PCDATA)>
+					<!ELEMENT	Popularity	(#PCDATA)>
+					<!ELEMENT	Accomodations (Location+, ExtraCost, CostCovered)>
+						<!ELEMENT	Location (City, Country, Planet)>
+							<!ELEMENT	City	(#PCDATA)>
+							<!ELEMENT	Country	(#PCDATA)>
+							<!ELEMENT	Planet	(#PCDATA)>
+						<!ELEMENT	ExtraCost	(#PCDATA)>
+						<!ELEMENT	CostCovered	(#PCDATA)>
+					<!ELEMENT	Coupon	(#PCDATA)>
+					<!ELEMENT	Reviews	(ReviewScore, ReviewName, ReviewDate)>
+						<!ELEMENT	ReviewScore (#PCDATA)>
+						<!ELEMENT	ReviewName	(#PCDATA)>
+						<!ELEMENT	ReviewDate	(#PCDATA)>
+					<!ELEMENT	PromoPic (PicName, PicPath)>
+						<!ELEMENT	PicName	(#PCDATA)>
+						<!ELEMENT	PicPath	(#PCDATA)>
+					<!ELEMENT	PromoPage	(PromoPath)>
+						<!ELEMENT	PromoPath (#PCDATA)>
+					<!ELEMENT	Affiliates	(#PCDATA)>
+					<!ELEMENT	PackageCode	(#PCDATA)>
+					<!ATTLIST	PackageCode	Code	ID #REQUIRED>
+					<!ENTITY	Default	"Earth">
+		]
+	>
+
+<Packages>
+	<Category>Adventure</Category>
+	<Package>
+		<PackageName>Adventurous Martian Package
+		</PackageName>
+		<Description>explore newly discovered Martian landscapes!
+		</Description>
+		<Cost>$2000
+		</Cost>
+		<Nights>5
+		</Nights>
+		<Popularity>4/5
+		</Popularity>
+		<Accomodations>
+			<Location>
+				<City>temporary camp
+				</City>
+				<Country>international land
+				</Country>
+				<Planet>Mars
+				</Planet>
+			</Location>
+			<ExtraCost>non
+			</ExtraCost>
+			<CostCovered>n/a
+			</CostCovered>
+		</Accomodations>
+		<Coupon>non
+		</Coupon>
+		<Reviews>
+			<ReviewScore>5/5
+			</ReviewScore>
+			<ReviewName>"good adventurous package for the money"
+			</ReviewName>
+			<ReviewDate>29/02/2034
+			</ReviewDate>
+		</Reviews>
+		<PromoPic>
+			<PicName>Landscape
+			</PicName>
+			<PicPath>images/Mars_Landscape.jpg
+			</PicPath>
+		</PromoPic>
+		<PromoPage>
+			<PromoPath>/home/user/goHoliday/Promo/AMP.html
+			</PromoPath>
+		</PromoPage>
+		<Affiliates>SpaceX
+		</Affiliates>
+		<PackageCode Code="jnzNyf6hC5I">
+		</PackageCode>
+	</Package>
+	
+	<Package>
+		<PackageName>ISS Exploration Package
+		</PackageName>
+		<Description>Explore the Internation Space Station
+		</Description>
+		<Cost>$2000
+		</Cost>
+		<Nights>3
+		</Nights>
+		<Popularity>5/5
+		</Popularity>
+		<Accomodations>
+			<Location>
+				<City>ISS
+				</City>
+				<Country>International Space Station
+				</Country>
+				<Planet>International Space
+				</Planet>
+			</Location>
+			<ExtraCost>non
+			</ExtraCost>
+			<CostCovered>n/a
+			</CostCovered>
+		</Accomodations>
+		<Coupon>non
+		</Coupon>
+		<Reviews>
+			<ReviewScore>2/5
+			</ReviewScore>
+			<ReviewName>"overrated, not worth"
+			</ReviewName>
+			<ReviewDate>20/12/2035
+			</ReviewDate>
+		</Reviews>
+		<PromoPic>
+			<PicName>ISS exterior
+			</PicName>
+			<PicPath>images/ISS_exterior.jpg
+			</PicPath>
+		</PromoPic>
+		<PromoPage>
+			<PromoPath>/home/user/goHoliday/Promo/ISS.html
+			</PromoPath>
+		</PromoPage>
+		<Affiliates>NASA
+		</Affiliates>
+		<PackageCode Code="rehazHm1Uw8">
+		</PackageCode>
+	</Package>
+	
+	<Package>
+		<PackageName>Martian Trail Package
+		</PackageName>
+		<Description>experience Mars like the first settlement had with this package!
+		</Description>
+		<Cost>$1500
+		</Cost>
+		<Nights>7
+		</Nights>
+		<Popularity>5/5
+		</Popularity>
+		<Accomodations>
+			<Location>
+				<City>New New York
+				</City>
+				<Country>US settlement
+				</Country>
+				<Planet>Mars
+				</Planet>
+			</Location>
+			<ExtraCost>medic team
+			</ExtraCost>
+			<CostCovered>yes
+			</CostCovered>
+		</Accomodations>
+		<Coupon>non
+		</Coupon>
+		<Reviews>
+			<ReviewScore>5/5
+			</ReviewScore>
+			<ReviewName>"solid trip, will come next year"
+			</ReviewName>
+			<ReviewDate>12/12/2033
+			</ReviewDate>
+		</Reviews>
+		<PromoPic>
+			<PicName>Martian Trail
+			</PicName>
+			<PicPath>images/Mars_Trail.jpg
+			</PicPath>
+		</PromoPic>
+		<PromoPage>
+			<PromoPath>/home/user/goHoliday/Promo/MTP
+			</PromoPath>
+		</PromoPage>
+		<Affiliates>NASA, US Space force
+		</Affiliates>
+		<PackageCode Code="fMfKs1R96jg">
+		</PackageCode>
+	</Package>
+</Packages>
+	

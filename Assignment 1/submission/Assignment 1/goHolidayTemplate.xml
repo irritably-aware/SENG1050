@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE Packages 
+		[
+			<!ELEMENT Packages (Category, Package+)>
+				<!ELEMENT	Category (#PCDATA)>
+				<!ELEMENT	Package (PackageName, Description, Cost, Nights, Popularity, Accomodations+, Coupon?, Reviews*, PromoPic*, PromoPage, Affiliates*, PackageCode)>
+					<!ELEMENT	PackageName	(#PCDATA)>
+					<!ELEMENT	Description	(#PCDATA)>
+					<!ELEMENT	Cost	(#PCDATA)>
+					<!ELEMENT	Nights	(#PCDATA)>
+					<!ELEMENT	Popularity	(#PCDATA)>
+					<!ELEMENT	Accomodations (Location+, ExtraCost, CostCovered)>
+						<!ELEMENT	Location (City, Country, Planet)>
+							<!ELEMENT	City	(#PCDATA)>
+							<!ELEMENT	Country	(#PCDATA)>
+							<!ELEMENT	Planet	(#PCDATA)>
+						<!ELEMENT	ExtraCost	(#PCDATA)>
+						<!ELEMENT	CostCovered	(#PCDATA)>
+					<!ELEMENT	Coupon	(#PCDATA)>
+					<!ELEMENT	Reviews	(ReviewScore, ReviewName, ReviewDate)>
+						<!ELEMENT	ReviewScore (#PCDATA)>
+						<!ELEMENT	ReviewName	(#PCDATA)>
+						<!ELEMENT	ReviewDate	(#PCDATA)>
+					<!ELEMENT	PromoPic (PicName, PicPath)>
+						<!ELEMENT	PicName	(#PCDATA)>
+						<!ELEMENT	PicPath	(#PCDATA)>
+					<!ELEMENT	PromoPage	(PromoPath)>
+						<!ELEMENT	PromoPath (#PCDATA)>
+					<!ELEMENT	Affiliates	(#PCDATA)>
+					<!ELEMENT	PackageCode	(#PCDATA)>
+					<!ATTLIST	PackageCode	Code	ID #REQUIRED>
+					<!ENTITY	Default	"Earth">
+		]
+	>
+	
+<Packages>
+	<Category></Category>
+	<Package>
+		<PackageName>
+		</PackageName>
+		<Description>
+		</Description>
+		<Cost>
+		</Cost>
+		<Nights>
+		</Nights>
+		<Popularity>
+		</Popularity>
+		<Accomodations>
+			<Location>
+				<City>
+				</City>
+				<Country>
+				</Country>
+				<Planet>
+				</Planet>
+			</Location>
+			<ExtraCost>
+			</ExtraCost>
+			<CostCovered>
+			</CostCovered>
+		</Accomodations>
+		<Coupon>
+		</Coupon>
+		<Reviews>
+			<ReviewScore>
+			</ReviewScore>
+			<ReviewName>
+			</ReviewName>
+			<ReviewDate>
+			</ReviewDate>
+		</Reviews>
+		<PromoPic>
+			<PicName>
+			</PicName>
+			<PicPath>
+			</PicPath>
+		</PromoPic>
+		<PromoPage>
+			<PromoPath>
+			</PromoPath>
+		</PromoPage>
+		<Affiliates>
+		</Affiliates>
+		<PackageCode Code="arbitiarycode1">
+		</PackageCode>
+	</Package>
+	
+	<Package>
+		<PackageName>
+		</PackageName>
+		<Description>
+		</Description>
+		<Cost>
+		</Cost>
+		<Nights>
+		</Nights>
+		<Popularity>
+		</Popularity>
+		<Accomodations>
+			<Location>
+				<City>
+				</City>
+				<Country>
+				</Country>
+				<Planet>
+				</Planet>
+			</Location>
+			<ExtraCost>
+			</ExtraCost>
+			<CostCovered>
+			</CostCovered>
+		</Accomodations>
+		<Coupon>
+		</Coupon>
+		<Reviews>
+			<ReviewScore>
+			</ReviewScore>
+			<ReviewName>
+			</ReviewName>
+			<ReviewDate>
+			</ReviewDate>
+		</Reviews>
+		<PromoPic>
+			<PicName>
+			</PicName>
+			<PicPath>
+			</PicPath>
+		</PromoPic>
+		<PromoPage>
+			<PromoPath>
+			</PromoPath>
+		</PromoPage>
+		<Affiliates>
+		</Affiliates>
+		<PackageCode Code="arbitiarycode2">
+		</PackageCode>
+	</Package>
+	
+	<Package>
+		<PackageName>
+		</PackageName>
+		<Description>
+		</Description>
+		<Cost>
+		</Cost>
+		<Nights>
+		</Nights>
+		<Popularity>
+		</Popularity>
+		<Accomodations>
+			<Location>
+				<City>
+				</City>
+				<Country>
+				</Country>
+				<Planet>
+				</Planet>
+			</Location>
+			<ExtraCost>
+			</ExtraCost>
+			<CostCovered>
+			</CostCovered>
+		</Accomodations>
+		<Coupon>
+		</Coupon>
+		<Reviews>
+			<ReviewScore>
+			</ReviewScore>
+			<ReviewName>
+			</ReviewName>
+			<ReviewDate>
+			</ReviewDate>
+		</Reviews>
+		<PromoPic>
+			<PicName>
+			</PicName>
+			<PicPath>
+			</PicPath>
+		</PromoPic>
+		<PromoPage>
+			<PromoPath>
+			</PromoPath>
+		</PromoPage>
+		<Affiliates>
+		</Affiliates>
+		<PackageCode Code="arbitiarycode3">
+		</PackageCode>
+	</Package>
+</Packages>

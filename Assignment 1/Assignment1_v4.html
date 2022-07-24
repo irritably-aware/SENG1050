@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>SENG1050 - Assignment 1</title>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		blockquote { font-style: italic }
+		.late { font-size: medium }
+		.listgroup * { margin-top: 0cm; margin-bottom: 0cm }
+		.warning {color: #ff0000;}
+	</style>
+</link></meta></head>
+
+<body>
+<div id="body">
+<h1>SENG1050 - Assignment 1</h1>
+<hr />
+<div class="toc"><a href="#outline">Outline</a> - <a href="#template">Template</a> - <a href="#objects">XML pages</a> - <a href="#web">Web Pages Development</a> - <a href="#submit">Submission</a> - <a href="#marking">Marking</a></div>
+<hr />
+<ul class="due">
+<li>Due: 11:59pm, Friday 18th September, 2020
+<ul class="late">
+<li>by 11:59pm, Saturday 19th September, 2020 = -10%</li>
+<li>by 11:59pm, Sunday 20th September, 2020 = -20%</li>
+<li>by 11:59pm, Monday 21st September, 2020 = -30%</li>
+<li>by 11:59pm, Tuesday 22nd September, 2020 = -40%</li>
+<li>by 11:59pm, Wednesday 23rd September, 2020 = -50%</li>
+<li>after 11:59pm, Wednesday 23rd September, 2020 = 0</li>
+</ul>
+</li>
+<li>Weight: SENG1050: 15% of course total</li>
+</ul>
+<p>The objectives of this assignment are to test your ability to create XML documents that contain well-defined information and to develop web pages using HTML with CSS. This assignment will be developed further in Assignment 2.</p>
+<div class="warning">
+<h3 id="generated">Warning - HTML, XML, CSS Generating Tools</h3>
+<p>You are <strong>NOT</strong> allowed to use tools which <em>generate</em> HTML, XML, XSLT or CSS code, either from a visual representation or otherwise. This includes DreamWeaver, Microsoft Frontpage, saving to HTML from MS Word, etc. You must write all code yourself in a plain-text editor such as NotePad. Any assignments that use code generated from a tool will be given <strong>ZERO</strong>.</p>
+</div>
+<h2 id="outline">Outline</h2>
+<p>Newcastle travel agent <em>goHoliday</em> plans to expand their business through online selling of holiday packages and providing holiday advice to customers. The first step is to build a website to allow customers register online and book different types of holiday packages such as adventure holidays, beach holidays, family holidays, budget holidays, luxury holidays, season holidays, cruise holidays, or honeymoon holidays.</p>
+<p>As a promising student of SENG1050, you are invited to develop a web site for <em>goHoliday</em>. To construct the web page, you will choose 2 of the categories listed above. For each category, you will provide a page listing 3 holiday packages. For example, if you choose Beach Holiday as a category, your page will list 3 beach holiday packages.</p>
+<p>Your task is to present these holidays as appealingly as possible on the web. This will involve,</p>
+<ol>
+<li>Creating an <a href="#template">XML template</a> and <a href="#dtd">DTD</a></li>
+<li>Creating two <a href="#objects">XML documents</a></li>
+<li>Developing <a href="#web">a home page</a> for the site.</li>
+</ol>
+<p>Details of all these requirements are given below.</p>
+<hr />
+<h2 id="template">XML Template</h2>
+<p>The template must be a <strong>valid</strong> XML file. The important parts of this template are the tags (i.e., the organization of the data), <strong>not the actual data</strong> about any holiday package. However, you may need to include some arbitrary data to allow your page to be validated. For example, if the <em>default</em> of an attribute is #REQUIRED, the attribute needs a value otherwise it will not be validated.</p>
+<h3>XML Specification</h3>
+<p>As new attractions are discovered and tourism opportunities developed, new categories of holidays can be created and promoted. For example, the future development of consumer-level space flight is expected to eventually lead to the creation of space holidays. So goHoliday's IT team, responsible for page updating and maintenance, will need an XML template that they can copy and use for all new categories. The template will be used for your example holidays described below.</p>
+<p>The document should be able to store as many holiday packages as required within a given category. You will decide the tags that you wish to use to describe the holiday. For each holiday, you will at least have element tags for the following items:</p>
+<ul>
+<li>Package Name (only one)</li>
+<li>Description (only one)</li>
+<li>Cost</li>
+<li>Number of Nights</li>
+<li>Popularity (number of stars out of five)</li>
+<li>Accommodation Options (at least one)
+<ul>
+<li>Location</li>
+<li>Additional cost (or mark as included with the package)</li>
+</ul>
+</li>
+<li>Coupon Code (zero or one)</li>
+<li>Reviews (zero or more)</li>
+<li>The filename of a promotional picture (one or more, use a relative path)</li>
+<li>URL of the destination's external promotional webpage (use an absolute path)</li>
+</ul>
+<p>At least 1 tag must have an attribute. If you include only the items mentioned above you will <strong>NOT</strong> get full marks for the assignment. In addition, you will add at least 2 more tags that make your template different from others.</p>
+<hr />
+<h2 id="dtd">DTD</h2>
+<p>You will write a DTD for your XML. Generally, it is your choice whether the DTD is internal or external; however, for the SENG1050 assignment, you will make the DTD internal because it is easier to validate your XML and DTD.</p>
+<p>Your DTD will to describe all the tags and attributes that you used in your XML. It is important to use optional modifiers (+, *, ?) to indicate how many instances of each tag are allowed.</p>
+<p>In your DTD, define at least one entity (&lt;!ENTITY&gt;) and use it in the XML document.</p>
+<hr />
+<h2 id="objects">XML documents</h2>
+<p>Once you have your XML template with DTD, you will make 2 separate XML documents by:</p>
+<ul>
+<li>Choosing two categories, and</li>
+<li>Creating one XML document for each category.</li>
+</ul>
+<p>Note:</p>
+<ul>
+<li>Each XML document must contain:
+<ul>
+<li><strong>data</strong> for 3 holiday packages, and</li>
+<li>the internal DTD at the top of the document.</li>
+</ul>
+</li>
+<li>The DTDs in 2 XML documents must be the same.</li>
+<li>The 2 XML documents must have the same tags and DTD as the XML template.</li>
+</ul>
+<hr />
+<h2 id="web">Homepage Development</h2>
+<p>You will develop the Homepage for <em>goHolidays</em> by creating the following files:</p>
+<ul>
+<li><a href="#all">Homepage (index.html)</a></li>
+<li><a href="#css">Cascading Style Sheet (style.css)</a></li>
+</ul>
+<p>Your site map will look as follows: <br /> <img src="SiteMap.jpg" alt="Site Map" /></p>
+<h3 id="all">General Requirements</h3>
+<ul>
+<li>Page will be coded according to the HTML5 standard.</li>
+<li>Page will contain the full HTML5 document structure, including &lt;!DOCTYPE&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt; and &lt;body&gt;.</li>
+<li>Page will use Cascading Style Sheets (CSS) for visual formatting. You must use an external style file and a few (NOT many) inline styles.</li>
+<li>Your assignment directory will contain a sub-directory, named <em>images</em> with all the image files you are using in your web pages.</li>
+<li>A nice, non-intrusive background image will be used for the page.</li>
+<li>Left side margin will be 1cm.</li>
+<li>The page will have good readability, consistency and navigation.</li>
+<li>Use CSS as follows:
+<ul>
+<li>Use a class attribute and a CSS .xxx selector to style multiple elements with the same class</li>
+<li>Use at least one &lt;div&gt; and use CSS to provide some interesting styling for it (your choice of borders, background, floating alignment, etc.)</li>
+<li>Use at least one &lt;span&gt; to provide some formatting (e.g. a colour or font change) for a few words of text</li>
+</ul>
+</li>
+<li>Provide comments for your HTML code</li>
+</ul>
+<h3 id="index">Detail Description for Homepage</h3>
+<p>Your submission will contain a homepage called <em>index.html</em>. This page will contain the following elements (in addition to the General Requirements):</p>
+<ul>
+<li>A descriptive title
+<ul>
+<li>The text that appears in the browser window’s title bar.</li>
+</ul>
+</li>
+<li>Navigation bar (Menu bar)
+<ul>
+<li>Hyperlinks from the index page to other pages (two XML pages).</li>
+<li>These links will use <em>a relative</em> URL.</li>
+<li>The text colours of a link before they are visited, after they are visited and during a user action must be different from each other. A link must appear bigger when you move the cursor over it. (You may choose your own colours but they should be obviously different).</li>
+</ul>
+</li>
+<li>Headings at more than one level, with &lt;h1&gt; formatted to make a nice looking title for the pages.
+<ul>
+<li>Level 1 heading appropriate for the homepage. Centre the heading.</li>
+<li>The page must have a couple of level 2 headings, which should be underlined.</li>
+<li>Meaningful headings for each section. All level 1 and 2 headings must be in uppercase and this must be controlled by the external stylesheet.</li>
+</ul>
+</li>
+<li>Several paragraphs of text
+<ul>
+<li>A paragraph welcoming people to the Web site. This particular paragraph should use a font size larger than other paragraphs.</li>
+<li>Use a CSS to control at least a few aspects of text rendering (e.g. colour, font-styles, text-align, etc.)</li>
+</ul>
+</li>
+<li>List 3 holiday packages
+<ul>
+<li>Use an unordered list or an ordered list</li>
+<li>Short descriptions for each holiday (no details needed, they are provided on the holiday pages)</li>
+<li>One image for each holiday package
+<ul>
+<li>Use an &lt;img&gt; tag</li>
+<li>Float them to the left side of the webpage using CSS. Add box information (margin, padding and/or border) to make it look nice on the webpage.</li>
+<li>Keep images in the <i>images</i> folder you created.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The above mentioned welcoming paragraph and the short description must have some abbreviations.</li>
+<li>One hyperlink to an external website <i>(e.g., http://www.newcastle.edu.au)</i>, but related to the course in some way. This must be <em>an absolute URL</em>.</li>
+<li>A copyright statement, including information about you, like your name and email address. Your external stylesheet must place the copyright statement on the right bottom corner of the page.</li>
+<li>Choose some other tag, such as EM, STRONG, P, or BLOCKQUOTE. You can customize that tag in your external style sheet.</li>
+</ul>
+<h3 id="css">External Style Sheet</h3>
+<ul>
+<li>Once your Homepage is written, create an external style sheet (<code>style.css</code>) to define the style of the Homepage. The external style sheet will specify:
+<ul>
+<li>The style of a header tag</li>
+<li>The background image, and the default font family, size, and colour for the text</li>
+<li>The style of the tags you used</li>
+</ul>
+</li>
+<li>Use a document-level style for some tags, AND an inline style for some other tags.</li>
+<li>Use at least one ID and one class selector in CSS.</li>
+</ul>
+<h3>Coding Style</h3>
+<p>Your HTML code and CSS code <strong>must</strong> be neat, indented, clear, and commented. Comments are also placed at the top of the file, and state the name of the file, the name of the author and the date the file created. Make sure these are comments, i.e. they don’t show on the web page, but only when one looks at the source code.</p>
+<p>Other than the specifications mentioned, the way you design your page is up to you. However it should use semantically-correct tags.</p>
+<p>Your creation must be fully valid HTML5 and CSS.</p>
+<p><br /></p>
+<hr />
+<h2 id="submit">Submission</h2>
+<p>Submission will be via the Assignments page on <a href="https://uonline.newcastle.edu.au">Blackboard</a>. To submit your files, place them all into a single <span class="file"><strong>.zip</strong></span> archive containing every file and submit it using the Web form in the Assignment 1 area. The <span class="file">.zip</span> archive should be named <span class="file">cXXXXXXX.zip</span> archive where <span class="file">XXXXXXX</span> is replaced by <strong>your</strong> student id.</p>
+<p>Your submission will contain:</p>
+<ol>
+<li>A template file (containing XML and DTD), two XML files (each XML file contains an internal DTD), a html homepage and a CSS file. If there are any other files that are part of your assignment (e.g. graphics files), include those too. You will also include a <span class="file">README.txt</span> file, containing your student number, a list of the files that are part of your submission, and references to any external content (such as images) that you have taken from other sources.</li>
+<li>A completed Assignment Cover Sheet. You can download an Assessment Item Cover Sheet for Individual Assessment of SENG1050 from BlackBoard or from <a href="http://www.newcastle.edu.au/current-students/learning/assessments-and-exams/submitting-an-assessment"> SUBMITTING AN ASSESSMENT</a>, then fill in the details and include it with your submission. An Assignment Cover Sheet submitted electronically is deemed to have been signed. Your assignment cannot be marked until a completed cover sheet is received.</li>
+</ol>
+<p>Failure to submit correctly is not of itself a sufficient reason to apply for Adverse Circumstances on the assignment.</p>
+<div class="warning">
+<h3 id="plagiarism">Warning - Plagiarism</h3>
+<p>Plagiarism is defined as <dfn>presenting the work of others' as if it was your own</dfn>. This includes the copying of content from other people's Web pages (and other sources) without "appropriate referencing" (indicating the parts of your assignment which have been copied and where they were copied from).</p>
+<p>If you "quote" other people's work (or images) in your assignments, then you <strong>must</strong> reference them appropriately (use a README.txt file to do this). Failure to do so will cause you to lose marks for the assignment. An assignment that consists largely of work copied from elsewhere will receive very low (zero) marks, and may be reported to the School for suspicion of plagiarism.</p>
+<p>You can find more information on the University's Policy on Student Academic Integrity in the Course Outline and at <a href="http://www.newcastle.edu.au/about-uon/governance-and-leadership/policy-library"> Policy Library</a></p>
+</div>
+<hr />
+<h2 id="marking">Marking Guide</h2>
+<p><br /></p>
+<ul>
+<li>Total Marks: 100
+<ul>
+<li><a href="#template">XML and DTD Template Page</a>: 30</li>
+<li><a href="#xml">XML pages</a>: 30</li>
+<li><a href="#homepage">Homepage</a> and <a href="#css">CSS</a>: 35</li>
+<li>Aesthetic appearance, neatness, spelling and grammar and correctly following instructions: 5</li>
+</ul>
+</li>
+<li>Remember, all XML, HTML and CSS pages must be valid. You should check your work before submitting at<br />
+<ul>
+<li><a href="https://validator.w3.org/">https://validator.w3.org</a> for HTML and CSS, and</li>
+<li><a href="https://www.xmlvalidation.com/">https://www.xmlvalidation.com/</a> for XML.</li>
+</ul>
+</li>
+</ul>
+</div>
+</body></html>
